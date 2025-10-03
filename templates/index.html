@@ -28,10 +28,37 @@
         .success { color: lime; }
         .error { color: red; }
         .loading { color: yellow; }
+        .instructions {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid lime;
+            background: #111;
+            font-size: 14px;
+        }
+        .step {
+            margin: 10px 0;
+        }
+        .step-number {
+            color: yellow;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <h2>HTML to GPX Converter</h2>
+
+    <div class="instructions">
+        <h3>Инструкция:</h3>
+        <div class="step">
+            <span class="step-number">1.</span> Откройте страницу маршрута на <strong>komoot.com</strong> [ссылка вида https://www.komoot.com/tour/{id}]
+        </div>
+        <div class="step">
+            <span class="step-number">2.</span> Сохраните страницу: <strong>Ctrl+S</strong> (или через меню браузера)
+        </div>
+        <div class="step">
+            <span class="step-number">3.</span> Выберите сохраненный <strong>HTML файл</strong> ниже
+        </div>
+    </div>
 
     <form id="uploadForm" enctype="multipart/form-data">
         <input type="file" id="html_file" name="html_file" accept=".html,.htm" required>
