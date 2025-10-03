@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify, send_file
 import tempfile
 import os
-from komoot_proj_web.parser_def import html_to_gpx_bytes
+from parser_def import html_to_gpx_bytes
 
 app = Flask(__name__)
 
