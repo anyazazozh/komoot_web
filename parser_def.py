@@ -9,7 +9,7 @@ def html_to_gpx_bytes(html: str, source_url: Optional[str] = None) -> bytes:
     # 1. Вырезаем блок coordinates.items
     block_match = re.search(r'\\"coordinates\\":\{\\?"items\\":\[(.*?)\]\}', html, re.S)
     if not block_match:
-        raise ValueError("Не нашли блок coordinates.items")
+        raise ValueError("Не нашли блок с координатами")
     block = block_match.group(1)
 
     # 2. Достаём lat/lng/alt/t только из этого блока
